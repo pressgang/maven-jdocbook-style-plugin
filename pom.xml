@@ -62,9 +62,9 @@
     </licenses>
 
     <scm>
-        <connection>scm:svn:http://anonsvn.jboss.org/repos/labs/labs/jbossbuild/maven-plugins/trunk/maven-jdocbook-style-plugin</connection>
-	<developerConnection>scm:svn:https://svn.labs.jboss.org/labs/jbossbuild/maven-plugins/trunk/maven-jdocbook-style-plugin</developerConnection>
-	<url>http://anonsvn.jboss.org/repos/labs/labs/jbossbuild/maven-plugins/trunk/maven-jdocbook-style-plugin</url>
+        <connection>scm:svn:http://anonsvn.jboss.org/repos/maven/plugins/jdocbook/maven-jdocbook-style-plugin/trunk</connection>
+	<developerConnection>scm:svn:https://svn.jboss.org/repos/maven/plugins/jdocbook/maven-jdocbook-style-plugin/trunk</developerConnection>
+	<url>http://anonsvn.jboss.org/repos/maven/plugins/jdocbook/maven-jdocbook-style-plugin/trunk</url>
     </scm>
 
     <dependencies>

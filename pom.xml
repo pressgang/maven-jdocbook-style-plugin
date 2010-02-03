@@ -1,0 +1,148 @@
+<!--
+  ~ Copyright (c) 2009, Red Hat Middleware LLC or third-party contributors as
+  ~ indicated by the @author tags or express copyright attribution
+  ~ statements applied by the authors.  All third-party contributions are
+  ~ distributed under license by Red Hat Middleware LLC.
+  ~
+  ~ This copyrighted material is made available to anyone wishing to use, modify,
+  ~ copy, or redistribute it subject to the terms and conditions of the GNU
+  ~ Lesser General Public License, as published by the Free Software Foundation.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+  ~ or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License
+  ~ for more details.
+  ~
+  ~ You should have received a copy of the GNU Lesser General Public License
+  ~ along with this distribution; if not, write to:
+  ~ Free Software Foundation, Inc.
+  ~ 51 Franklin Street, Fifth Floor
+  ~ Boston, MA  02110-1301  USA
+  -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+        <groupId>org.jboss</groupId>
+        <artifactId>jboss-parent</artifactId>
+        <version>5-beta-1</version>
+    </parent>
+
+    <groupId>org.jboss.maven.plugins</groupId>
+    <artifactId>maven-jdocbook-style-plugin</artifactId>
+    <packaging>maven-plugin</packaging>
+    <version>2.0.1-SNAPSHOT</version>
+
+    <name>Maven Docbook Style Plugin</name>
+    <description>Defines the custom 'jdocbook-style' packaging.</description>
+
+    <inceptionYear>2007</inceptionYear>
+    <organization>
+        <name>JBoss, a division of Red Hat, Inc</name>
+        <url>http://jboss.org/</url>
+    </organization>
+
+    <developers>
+        <developer>
+            <name>Steve Ebersole</name>
+            <email>steve@hibernate.org</email>
+            <organization>JBoss, a division of Red Hat, Inc</organization>
+            <organizationUrl>http://jboss.org</organizationUrl>
+            <timezone>-5</timezone>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>GNU Lesser General Public License</name>
+            <url>http://www.gnu.org/copyleft/lesser.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:svn:http://anonsvn.jboss.org/repos/labs/labs/jbossbuild/maven-plugins/trunk/maven-jdocbook-style-plugin</connection>
+	<developerConnection>scm:svn:https://svn.labs.jboss.org/labs/jbossbuild/maven-plugins/trunk/maven-jdocbook-style-plugin</developerConnection>
+	<url>http://anonsvn.jboss.org/repos/labs/labs/jbossbuild/maven-plugins/trunk/maven-jdocbook-style-plugin</url>
+    </scm>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-plugin-api</artifactId>
+            <version>2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-model</artifactId>
+            <version>2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-project</artifactId>
+            <version>2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.plexus</groupId>
+            <artifactId>plexus-utils</artifactId>
+            <version>1.0.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.maven.util</groupId>
+            <artifactId>jboss-maven-utils</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <tagBase>https://svn.jboss.org/repos/labs/labs/jbossbuild/maven-plugins/tags</tagBase>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.4</source>
+                    <target>1.4</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-plugin-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </reporting>
+
+
+    <distributionManagement>
+        <repository>
+            <id>repository.jboss.org</id>
+            <url>dav:https://repository.jboss.org/maven2</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots.jboss.org</id>
+            <name>JBoss Snapshot Repository</name>
+            <url>dav:https://snapshots.jboss.org/maven2</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+</project>

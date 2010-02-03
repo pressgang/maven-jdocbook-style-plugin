@@ -1,0 +1,63 @@
+ ------
+ Introduction
+ ------
+ Steve Ebersole
+ ------
+ 22 June 2007
+ ------
+
+~~ Copyright © 2007  Red Hat Middleware, LLC. All rights reserved.
+~~
+~~ This copyrighted material is made available to anyone wishing to use, modify,
+~~ copy, or redistribute it subject to the terms and conditions of the GNU
+~~ Lesser General Public License, v. 2.1. This program is distributed in the
+~~ hope that it will be useful, but WITHOUT A WARRANTY; without even the implied
+~~ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+~~ Lesser General Public License for more details. You should have received a
+~~ copy of the GNU Lesser General Public License, v.2.1 along with this
+~~ distribution; if not, write to the Free Software Foundation, Inc.,
+~~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+~~
+~~ Red Hat Author(s): Steve Ebersole
+
+jDocBook Style Plugin
+
+    The <jDocBook Style Plugin> defines a dedicate packaging
+    ("jdocbook-style") for projects defining shared DocBook "style bundles".
+    These style bundles are considered to be comprised of (1) custom XSLT,
+    (2) custom images, (3) custom css, and (4) custom fonts.  Having a dedicated
+    packaging for these support resources is useful in two ways:
+
+    [[1]] It allows enforcing a consistent structure or layout inside the
+        packaged archive.
+
+    [[2]] It allows users of the package to assume a consistent layout within
+        the packaged archive.
+
+    []
+
+* Goals Overview
+
+    As already mentioned, the plugin defines a custom packaging.  As part of
+    that, it defines a custom set of lifecycle phase bindings.  Below are the
+    phases the plugin defines and the goals bound to each lifecycle phase:
+
+    [process-resources] binds the {{{resources-mojo.html}jdocbook-style:resources}}
+        goal which "stages" the resources need for the XSLT transformations into the
+        output directory.
+
+    [package] binds the standard jar:jar goal.
+
+    [install] binds the standard install goal.
+
+    [deploy] binds the standard deploy goal.
+
+    []
+
+* Usage
+
+    Instructions on how to use the <jDocBook Style Plugin> can be found {{{usage.html}here}}.
+
+* Examples
+
+    * {{{examples/custom-directories.html}Custom Directories}}
